@@ -97,16 +97,36 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body{
+    margin-top: -2em;
+}
 header{
     background-image: url("../img/header-background.jpg");
     background-repeat: no-repeat;
     height: 20em;
     background-size: cover;
-    background-position:center 40%;
-    
-    
-    
+    background-position:center 50%;
 }
+.bodycontent{
+    margin-right: 15%;
+    margin-left: 3%;
+}
+aside{
+    float: left;
+    padding-right: 3em;
+    text-align: center;
+}
+.avatar{
+    height: 7em;
+    width: 7em;
+    border-radius: 50%;
+    border: .4em solid white;
+    margin-top: -5em; 
+}
+.content{
+}
+
+
 
 
 
