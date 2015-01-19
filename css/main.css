@@ -114,7 +114,14 @@ header{
 aside{
     float: left;
     padding-right: 3em;
-    text-align: center;
+    text-align: left;
+}
+aside .top-nav a{
+    text-decoration: none;
+    color:#868686;
+}
+ul.top-nav{
+    list-style: none;
 }
 .avatar{
     height: 7em;
@@ -123,7 +130,17 @@ aside{
     border: .4em solid white;
     margin-top: -5em; 
 }
+.social-list i{
+    padding: 5px;
+    color:#868686    
+}
+aside h5{
+    font-size: 1.5em;
+    margin-top:-.5em;
+    margin-bottom:-1%;
+}
 .content{
+ font-family: 'Open Sans', sans-serif;
 }
 
 
