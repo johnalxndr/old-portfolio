@@ -97,7 +97,16 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
+header{
+    background-image: url("../img/header-background.jpg");
+    background-repeat: no-repeat;
+    height: 20em;
+    background-size: cover;
+    background-position:center 40%;
+    
+    
+    
+}
 
 
 
