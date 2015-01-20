@@ -128,11 +128,12 @@ aside .avatar{
     width: 7em;
     border-radius: 50%;
     border: .4em solid white;
-    margin-top: -5em; 
+    margin-top: -4em; 
 }
-.social-list i{
+.social-list a{
     padding: 5px;
-    color:#868686;    
+    color:#868686;
+    text-decoration: none;    
 }
 aside h5{
     font-size: 1.5em;
@@ -141,9 +142,12 @@ aside h5{
 }
 article{
      font-family: 'Open Sans', sans-serif;
+     float:right;
+     max-width:35em;
 }
 footer{
     clear:both;
+    background-color: #e0e0e0
 }
 .bottom-box .avatar{
     height: 5em;
