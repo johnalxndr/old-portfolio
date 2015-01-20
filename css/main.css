@@ -123,7 +123,7 @@ aside .top-nav a{
 ul.top-nav{
     list-style: none;
 }
-.avatar{
+aside .avatar{
     height: 7em;
     width: 7em;
     border-radius: 50%;
@@ -132,15 +132,30 @@ ul.top-nav{
 }
 .social-list i{
     padding: 5px;
-    color:#868686    
+    color:#868686;    
 }
 aside h5{
     font-size: 1.5em;
     margin-top:-.5em;
     margin-bottom:-1%;
 }
-.content{
- font-family: 'Open Sans', sans-serif;
+article{
+     font-family: 'Open Sans', sans-serif;
+}
+footer{
+    clear:both;
+}
+.bottom-box .avatar{
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    margin-left:15%;
+    margin-top: 1em
+}
+.bottom-box{
+}
+.footer-content{
+    margin-left: 22em;
 }
 
 
