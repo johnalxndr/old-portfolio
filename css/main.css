@@ -1,3 +1,12 @@
 body {
-    background-color: #4ba39a;
+    background-color: #2e2e2e;
+}
+
+h2 {
+    color: crimson;
+}
+
+.social-icons {
+    list-style: none;
+    text-decoration: none;
 }
