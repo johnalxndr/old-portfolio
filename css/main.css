@@ -1,5 +1,5 @@
 body {
-    background-color: darkgray
+    background-color: white;
 }
 
 .header {
@@ -9,12 +9,12 @@ body {
 
 .avatar {
     border-radius: 50%;
-    border: 2px solid black;
-    height: 4em;
-    width: 4em;
+    border: 3px solid red;
+    height: 5em;
+    width: 5em;
     margin: 0 auto;
-    margin-top: -2em;
-    background-color: deepskyblue;
+    margin-top: -2.7em;
+    background-color: antiquewhite;
 }
 
 h2 {
