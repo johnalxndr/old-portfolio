@@ -5,16 +5,15 @@ body {
 .header {
     padding: 3em;
     background-color: #2e2e2e;
+    z-index: -1;
 }
 
-.avatar {
+img {
     border-radius: 50%;
-    border: 3px solid red;
     height: 5em;
     width: 5em;
-    margin: 0 auto;
-    margin-top: -2.7em;
-    background-color: antiquewhite;
+    z-index: 1;
+    margin-top: -2em;
 }
 
 h2 {
@@ -27,12 +26,18 @@ h3 {
 }
 
 .social-icons {
-    list-style: none;
-    font-size: 1em;
+    font-size: 2em;
+}
+
+.social {
     text-align: center;
 }
 
-.social-icons li {
+.profile-info {
+    text-align: center;
+}
+
+li {
     display: inline;
     text-decoration: none;
 }
