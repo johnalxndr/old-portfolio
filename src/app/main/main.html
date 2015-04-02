@@ -1,8 +1,8 @@
 <header class="header">
     <h1>John Alexander</h1>
     <h2>Front-End Developer</h2>
-    <nav>
-        <ul>
+    <nav class="col-sm-12">
+        <ul class="col-sm-12">
             <li><a href="#work">work</a>
             </li>
             <li><a href="#about">about</a>
@@ -13,24 +13,6 @@
             </li>
         </ul>
     </nav>
+    <img class="avatar" src="assets/images/IMG_0159.JPG">
+
 </header>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'">
-            <div class="thumbnail">
-                <img class="pull-right" ng-src="assets/images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}">
-                <div class="caption">
-                    <h3>{{awesomeThing.title}}</h3>
-                    <p>{{awesomeThing.description}}</p>
-                    <p><a ng-href="{{awesomeThing.url}}">{{awesomeThing.url}}</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr>
-    <div class="footer">
-    </div>
-
-</div>
