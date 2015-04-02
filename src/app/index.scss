@@ -1,23 +1,51 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+$bright-red: #E3203A;
+$dark-grey:#41505B;
+$light-grey:#B7BDC1;
 .header {
     background-color: #ffffff;
     margin-top: -3em;
     padding: 3em;
     text-align: center;
+    border-bottom: 3px solid $dark-grey;
+    h1 {
+        color: $dark-grey;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    h2 {
+        color: $light-grey;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
     nav {
-    margin-top: 3em;
-    ul {
-        li {
-            display: inline;
-            padding: 2em;
-            a {
-                text-decoration: none;
+        margin-top: 3em;
+        font-family: 'Source Sans Pro', sans-serif;
+        ul {
+            li {
+                display: inline;
+                a {
+                    text-decoration: none;
+                    color: $bright-red;
+                    padding: 1em;
+                    font-size: 1em;
+                }
+                a:hover {
+                    border-bottom: 1px solid red;
+                }
+                a:active {
+                    border-bottom: 1px solid red;
+                }
             }
         }
     }
+    img {
+        height: 7em;
+        width: 7em;
+        border-radius: 50%;
+        margin-bottom: -8em;
+        z-index: 1;
+        border: solid 4px $bright-red;
+    }
 }
-}
-
-
 
 .browsehappy {
     margin: 0.2em 0;
