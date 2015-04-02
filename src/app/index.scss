@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
 $bright-red: #E3203A;
 $dark-grey:#41505B;
 $light-grey:#B7BDC1;
@@ -11,10 +11,14 @@ $light-grey:#B7BDC1;
     h1 {
         color: $dark-grey;
         font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 600;
     }
     h2 {
         color: $light-grey;
         font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 400;
+        margin-top: -.5ex;
+        font-size: 1.5em;
     }
     nav {
         margin-top: 3em;
@@ -44,6 +48,30 @@ $light-grey:#B7BDC1;
         margin-bottom: -8em;
         z-index: 1;
         border: solid 4px $bright-red;
+    }
+}
+
+.about {
+    margin-top: 5em;
+    p {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 1.5em;
+        color: darken($light-grey, 50%);
+        text-align: center;
+        margin: 5%;
+        a {
+            text-decoration: none;
+        }
+        .twitter {
+            color: #55ACEE;
+        }
+        .linkedin {
+            color: #0077B5;
+        }
+        .instagram {
+            color: #675144;
+        }
     }
 }
 
