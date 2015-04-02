@@ -52,12 +52,18 @@ $light-grey:#B7BDC1;
 }
 
 .about {
-    margin-top: 5em;
+    background-color: $dark-grey;
+    h3 {
+        margin-top: 4em;
+        text-align: center;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: $bright-red;
+    }
     p {
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: 300;
         font-size: 1.5em;
-        color: darken($light-grey, 50%);
+        color: $light-grey;
         text-align: center;
         margin: 5%;
         a {
@@ -72,6 +78,17 @@ $light-grey:#B7BDC1;
         .instagram {
             color: #675144;
         }
+    }
+}
+
+#work {
+    h2 {
+        margin-top: 3em;
+        margin-bottom: 3em;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: $dark-grey;
+        text-align: center;
+        .work-box {}
     }
 }
 
