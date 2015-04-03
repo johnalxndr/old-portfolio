@@ -123,5 +123,24 @@ $lighter-grey:#E2E5E5;
     }
 }
 
+#toolset {
+    background-color: $dark-grey;
+    text-align: center;
+    h2 {
+        color: $light-grey;
+        padding: 1em;
+    }
+    i {
+        font-size: 4em;
+        color: $bright-red;
+    }
+    h3 {
+        color: $lighter-grey;
+    }
+    p {
+        color: $lighter-grey;
+    }
+}
+
 // injector
 // endinjector
