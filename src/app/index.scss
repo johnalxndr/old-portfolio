@@ -53,6 +53,7 @@ $light-grey:#B7BDC1;
 
 .about {
     background-color: $dark-grey;
+    padding-bottom: 10em;
     h3 {
         margin-top: 4em;
         text-align: center;
@@ -83,6 +84,7 @@ $light-grey:#B7BDC1;
 
 #work {
     margin-top: 2em;
+    padding-bottom: 10em;
     h2 {
         font-family: 'Source Sans Pro', sans-serif;
         color: $dark-grey;
@@ -92,7 +94,12 @@ $light-grey:#B7BDC1;
             font-size: 1.5em;
             margin-bottom: 1ex;
         }
-        .work-box {}
+    }
+    .portfolio-item {
+        margin-top: 4em;
+        border: solid 1px $light-grey;
+        padding: 2em;
+        background-color: #f2f2f2;
     }
 }
 
