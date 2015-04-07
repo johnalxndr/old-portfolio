@@ -25,7 +25,11 @@ $desktop-width: 992px;
         @content;
     }
 }
-
+html, body, div{
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+}
 .header {
     background-color: #ffffff;
     margin-top: -3em;
@@ -209,6 +213,8 @@ $desktop-width: 992px;
 }
 
 footer {
+    width: 100%;
+    padding: 2em;
     p {}
     .social-icons {
         list-style: none;
