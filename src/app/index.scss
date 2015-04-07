@@ -5,26 +5,21 @@ $light-grey:#B7BDC1;
 $lighter-grey:#E2E5E5;
 $tablet-width: 768px;
 $desktop-width: 992px;
+
 @mixin tablet {
-    @media (min-width: #{
-        $tablet-width
-    }
-    ) and (max-width: #{
-        $desktop-width - 1px
-    }
-    ) {
-        @content;
-    }
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media (min-width: #{
-        $desktop-width
-    }
-    ) {
-        @content;
-    }
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
 }
+
+
+
 html, body, div{
     margin: 0 !important;
     padding: 0 !important;
@@ -76,6 +71,10 @@ html, body, div{
         margin-bottom: -8em;
         z-index: 1;
         border: solid 4px $bright-red;
+        @extend tablet{
+            height:20em;
+            width:20em;
+        }
     }
 }
 
@@ -125,7 +124,7 @@ html, body, div{
             color: #0077B5;
         }
         .instagram {
-            color: #675144;
+            color: #bc4e0c;
         }
     }
 }
@@ -139,12 +138,10 @@ html, body, div{
         text-align: center;
     }
     .portfolio-item {
-        padding: 1em;
-        margin-top: 4em;
-        .portfolio-description {
-            @include desktop {
-                margin-top: 10em;
-            }
+        margin-top: 2em;
+        .bq{
+            float: right;
+            margin-right: 2em;
         }
         h3 {
             a {
@@ -180,9 +177,6 @@ html, body, div{
             }
         }
     }
-    .portfolio-item:nth-child(odd) {
-        background-color: $lighter-grey;
-    }
 }
 
 #skills {
@@ -215,7 +209,10 @@ html, body, div{
 footer {
     width: 100%;
     padding: 2em;
-    p {}
+    background-color: $dark-grey;
+    p{
+        color: $bright-red;
+    }
     .social-icons {
         list-style: none;
         li {
@@ -224,6 +221,13 @@ footer {
         }
     }
 }
+footer > div > ul > li > a{
+    color: $light-grey;
+    i.ios-twitter{
+        color: aqua;
+    }
+}
+
 
 // injector
 // endinjector
