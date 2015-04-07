@@ -3,21 +3,27 @@ $bright-red: #E3203A;
 $dark-grey:#41505B;
 $light-grey:#B7BDC1;
 $lighter-grey:#E2E5E5;
-
-
 $tablet-width: 768px;
 $desktop-width: 992px;
-
 @mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-    @content;
-  }
+    @media (min-width: #{
+        $tablet-width
+    }
+    ) and (max-width: #{
+        $desktop-width - 1px
+    }
+    ) {
+        @content;
+    }
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop-width}) {
-    @content;
-  }
+    @media (min-width: #{
+        $desktop-width
+    }
+    ) {
+        @content;
+    }
 }
 
 .header {
@@ -70,7 +76,7 @@ $desktop-width: 992px;
 }
 
 .about {
-    background-color: $lighter-grey;
+    background-color: #ffffff;
     padding-bottom: 5em;
     .arrow {
         color: $bright-red;
@@ -197,15 +203,16 @@ $desktop-width: 992px;
         color: $lighter-grey;
     }
 }
-.navbar-default{
-    background-color:#ffffff;
+
+.navbar-default {
+    background-color: #ffffff;
 }
-footer{
-    p{
-    }
-    .social-icons{
+
+footer {
+    p {}
+    .social-icons {
         list-style: none;
-        li{
+        li {
             display: inline;
             font-size: 2em;
         }
