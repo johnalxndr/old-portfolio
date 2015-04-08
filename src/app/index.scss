@@ -71,10 +71,6 @@ html, body, div{
         margin-bottom: -8em;
         z-index: 1;
         border: solid 4px $bright-red;
-        @extend tablet{
-            height:20em;
-            width:20em;
-        }
     }
 }
 
