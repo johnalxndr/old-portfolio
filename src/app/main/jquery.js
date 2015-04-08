@@ -1,3 +1,4 @@
+'use strict';
 $(document).ready(function () {
     console.log("sanity check");
 //  $('a[href*=#]:not([href=#portfolioModal1], [href=#portfolioModal2], [href=#portfolioModal3], [href=#portfolioModal4], [href=#portfolioModal5], [href=#portfolioModal6])').click(function() {
