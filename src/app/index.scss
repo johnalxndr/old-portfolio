@@ -3,28 +3,14 @@ $bright-red: #E3203A;
 $dark-grey:#41505B;
 $light-grey:#B7BDC1;
 $lighter-grey:#E2E5E5;
-$tablet-width: 768px;
-$desktop-width: 992px;
-
-@mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: #{$desktop-width}) {
-    @content;
-  }
-}
-
-
-
-html, body, div{
+html,
+body,
+div {
     margin: 0 !important;
     padding: 0 !important;
     width: 100%;
 }
+
 .header {
     background-color: #ffffff;
     margin-top: -3em;
@@ -135,7 +121,7 @@ html, body, div{
     }
     .portfolio-item {
         margin-top: 2em;
-        .bq{
+        .bq {
             float: right;
             margin-right: 2em;
         }
@@ -205,25 +191,24 @@ html, body, div{
 footer {
     width: 100%;
     padding: 2em;
-    background-color: $dark-grey;
-    p{
+    background-color: $lighter-grey;
+    text-align: center;
+    p {
         color: $bright-red;
-    }
-    .social-icons {
-        list-style: none;
-        li {
-            display: inline;
-            font-size: 2em;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1em;
+        span {
+            float: left;
+        }
+        a {
+            color: $dark-grey;
+        }
+        a:hover {
+            color: $light-grey;
+            text-decoration: none;
         }
     }
 }
-footer > div > ul > li > a{
-    color: $light-grey;
-    i.ios-twitter{
-        color: aqua;
-    }
-}
-
 
 // injector
 // endinjector
