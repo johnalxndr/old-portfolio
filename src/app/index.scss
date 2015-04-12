@@ -3,6 +3,12 @@ $bright-red: #E3203A;
 $dark-grey:#41505B;
 $light-grey:#B7BDC1;
 $lighter-grey:#E2E5E5;
+@mixin tablet {
+    @media only screen and (max-width: 992px) {
+        @content;
+    }
+}
+
 html,
 body,
 div {
@@ -21,6 +27,11 @@ div {
         color: $dark-grey;
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: 600;
+    }
+    @include tablet {
+        h1 {
+            font-size: 6em;
+        }
     }
     h2 {
         color: $light-grey;
