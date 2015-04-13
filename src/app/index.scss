@@ -27,10 +27,11 @@ div {
         color: $dark-grey;
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: 600;
+        text-align: center;
     }
     @include tablet {
         h1 {
-            font-size: 6em;
+            font-size: 5em;
         }
     }
     h2 {
@@ -45,6 +46,7 @@ div {
         font-family: 'Source Sans Pro', sans-serif;
         ul {
             li {
+                @extend .col-sm-4;
                 display: inline;
                 a {
                     text-decoration: none;
@@ -87,12 +89,17 @@ div {
             display: inline;
             font-size: 2em;
             padding: .5em;
-            a {
-                color: $dark-grey;
-            }
-            a:hover {
-                color: $bright-red;
-            }
+        }
+    }
+    ul.social-icons > li > a {
+        .twitter {
+            color: #55ACEE;
+        }
+        .github {
+            color: #333333;
+        }
+        .linkedin {
+            color: #0976b4;
         }
     }
     h3 {
