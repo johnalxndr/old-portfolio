@@ -4,7 +4,7 @@ $dark-grey:#41505B;
 $light-grey:#B7BDC1;
 $lighter-grey:#E2E5E5;
 @mixin tablet {
-    @media only screen and (max-width: 992px) {
+    @media only screen and (min-width: 768px) {
         @content;
     }
 }
@@ -17,22 +17,17 @@ div {
     width: 100%;
 }
 
-.header {
+header {
     background-color: #ffffff;
     margin-top: -3em;
     padding: 3em;
-    text-align: center;
     border-bottom: 3px solid $dark-grey;
+    text-align: center;
     h1 {
         color: $dark-grey;
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: 600;
         text-align: center;
-    }
-    @include tablet {
-        h1 {
-            font-size: 5em;
-        }
     }
     h2 {
         color: $light-grey;
@@ -41,25 +36,28 @@ div {
         margin-top: -.5ex;
         font-size: 1.5em;
     }
-    nav {
+    ul {
+        padding: 0;
         margin-top: 3em;
         font-family: 'Source Sans Pro', sans-serif;
-        ul {
-            li {
-                @extend .col-sm-4;
-                display: inline;
-                a {
-                    text-decoration: none;
-                    color: $bright-red;
-                    padding: 1em;
-                    font-size: 1em;
-                }
-                a:hover {
-                    border-bottom: 1px solid red;
-                }
-                a:active {
-                    border-bottom: 1px solid red;
-                }
+        li {
+            display: inline;
+            a {
+                color: $bright-red;
+                padding: 1em;
+                font-size: 1em;
+            }
+            a:hover {
+                border-bottom: 1px solid red;
+                text-decoration: none;
+                color: $bright-red;
+            }
+            a:active {
+                border-bottom: 1px solid red;
+                text-decoration: none;
+            }
+            a:visited {
+                text-decoration: none;
             }
         }
     }
@@ -69,7 +67,13 @@ div {
         border-radius: 50%;
         margin-bottom: -8em;
         z-index: 1;
-        border: solid 4px $bright-red;
+        border: solid 4px $light-grey;
+    }
+    @include tablet {
+        img {
+            float: left;
+            margin-top: -10.5em;
+        }
     }
 }
 
@@ -93,13 +97,29 @@ div {
     }
     ul.social-icons > li > a {
         .twitter {
-            color: #55ACEE;
+            padding: 5px;
+            color: $dark-grey;
+            &:hover {
+                color: #55ACEE;
+            }
         }
         .github {
-            color: #333333;
+            color: $dark-grey;
+            &:hover {
+                color: #4183c4;
+            }
         }
         .linkedin {
-            color: #0976b4;
+            color: $dark-grey;
+            &:hover {
+                color: #0976b4;
+            }
+        }
+        .email {
+            color: $dark-grey;
+            &:hover {
+                color: $bright-red;
+            }
         }
     }
     h3 {
@@ -143,42 +163,42 @@ div {
             float: right;
             margin-right: 2em;
         }
-        h3 {
-            a {
+        .portfolio-description {
+            button {
                 text-decoration: none;
-                color: $dark-grey;
-                font-family: 'Source Sans Pro', sans-serif;
             }
         }
-        h4 {
+    }
+    h3 {
+        color: $dark-grey;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    h4 {
+        color: $light-grey;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1em;
+    }
+    p {
+        color: $dark-grey;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 2.5ex;
+        a {
+            text-decoration: none;
             color: $light-grey;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 1em;
-        }
-        p {
-            margin-top: 3em;
-            color: $dark-grey;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-weight: 300;
-            font-size: 2.5ex;
-            a {
-                text-decoration: none;
-                color: $light-grey;
-                &:hover {
-                    color: $bright-red;
-                }
-                span {
-                    color: $dark-grey;
-                }
-                i {
-                    color: $bright-red;
-                    margin-left: .5em;
-                }
+            &:hover {
+                color: $bright-red;
+            }
+            span {
+                color: $dark-grey;
+            }
+            i {
+                color: $bright-red;
+                margin-left: .5em;
             }
         }
     }
 }
-
 #skills {
     background-color: $dark-grey;
     text-align: center;
@@ -190,22 +210,23 @@ div {
         padding: 1em;
         margin-top: -1em;
     }
+    
     i {
         font-size: 4em;
         color: $bright-red;
     }
+    
     h3 {
         color: $lighter-grey;
     }
+    
     p {
         color: $lighter-grey;
     }
 }
-
 .navbar-default {
     background-color: #ffffff;
 }
-
 footer {
     width: 100%;
     padding: 2em;
@@ -227,6 +248,5 @@ footer {
         }
     }
 }
-
 // injector
 // endinjector
