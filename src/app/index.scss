@@ -3,12 +3,23 @@ $bright-red: #E3203A;
 $dark-grey:#41505B;
 $light-grey:#B7BDC1;
 $lighter-grey:#E2E5E5;
+
+
+$tablet-width: 768px;
+$desktop-width: 992px;
+
 @mixin tablet {
-    @media only screen and (min-width: 768px) {
-        @content;
-    }
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
 }
 
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+ 
 html,
 body,
 div {
@@ -17,6 +28,7 @@ div {
     width: 100%;
 }
 
+//-----HEADER----------
 header {
     background-color: #ffffff;
     margin-top: -3em;
@@ -28,6 +40,9 @@ header {
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: 600;
         text-align: center;
+        @include desktop{
+            font-size: 5em;
+        }
     }
     h2 {
         color: $light-grey;
@@ -35,13 +50,20 @@ header {
         font-weight: 400;
         margin-top: -.5ex;
         font-size: 1.5em;
+        @include desktop{
+            font-size:3em;
+        }
     }
+   
     ul {
         padding: 0;
         margin-top: 3em;
         font-family: 'Source Sans Pro', sans-serif;
         li {
             display: inline;
+             @include desktop{
+                font-size:1.5em;
+        }
             a {
                 color: $bright-red;
                 padding: 1em;
@@ -68,15 +90,15 @@ header {
         margin-bottom: -8em;
         z-index: 1;
         border: solid 4px $light-grey;
-    }
-    @include tablet {
-        img {
-            float: left;
-            margin-top: -10.5em;
+        @include desktop{
+            height: 10em;
+            width:10em;
+            margin-top: 2em;
         }
     }
 }
 
+//--------ABOUT---------------
 .about {
     background-color: #ffffff;
     padding-bottom: 5em;
@@ -93,32 +115,41 @@ header {
             display: inline;
             font-size: 2em;
             padding: .5em;
+            @include desktop{
+                font-size: 3em;
+                margin-bottom: 2em;
+            }
         }
     }
+    
     ul.social-icons > li > a {
         .twitter {
             padding: 5px;
             color: $dark-grey;
-            &:hover {
+            &:hover:before {
                 color: #55ACEE;
+                content: '\f243';
             }
         }
         .github {
             color: $dark-grey;
-            &:hover {
+            &:hover:before {
                 color: #4183c4;
+                content: '\f233';
             }
         }
         .linkedin {
             color: $dark-grey;
-            &:hover {
+            &:hover:before {
                 color: #0976b4;
+                content: '\f239';
             }
         }
         .email {
             color: $dark-grey;
-            &:hover {
-                color: $bright-red;
+            &:hover:before {
+                color: $dark-grey;
+                content: '\f423';
             }
         }
     }
@@ -149,6 +180,7 @@ header {
     }
 }
 
+//--------WORK------------
 #work {
     margin-top: 2em;
     padding-bottom: 10em;
@@ -164,8 +196,13 @@ header {
             margin-right: 2em;
         }
         .portfolio-description {
-            button {
-                text-decoration: none;
+            a {
+                color: $bright-red;
+                border-color: $light-grey;
+                &:hover {
+                    border-color: $bright-red;
+                    background-color: #ffffff;
+                }
             }
         }
     }
@@ -177,12 +214,14 @@ header {
         color: $light-grey;
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 1em;
+        margin-bottom: 1em;
     }
     p {
         color: $dark-grey;
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: 300;
         font-size: 2.5ex;
+        margin-bottom: 1em;
         a {
             text-decoration: none;
             color: $light-grey;
@@ -199,10 +238,11 @@ header {
         }
     }
 }
+
+//------SKILLS----------
 #skills {
     background-color: $dark-grey;
     text-align: center;
-    padding: 3em;
     padding-top: 5em;
     padding-bottom: 10em;
     h2 {
@@ -210,23 +250,30 @@ header {
         padding: 1em;
         margin-top: -1em;
     }
-    
     i {
         font-size: 4em;
         color: $bright-red;
     }
-    
     h3 {
         color: $lighter-grey;
     }
-    
     p {
         color: $lighter-grey;
+        padding: 1em;
     }
 }
+
+@include tablet {
+    #skills {
+      padding: 4em;
+    }
+}
+
 .navbar-default {
     background-color: #ffffff;
 }
+
+//-----------FOOTER----------
 footer {
     width: 100%;
     padding: 2em;
@@ -248,5 +295,6 @@ footer {
         }
     }
 }
+
 // injector
 // endinjector
