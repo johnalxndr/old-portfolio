@@ -195,6 +195,7 @@ header {
         font-family: 'Source Sans Pro', sans-serif;
         color: $dark-grey;
         text-align: center;
+        font-size:4em;
     }
     .portfolio-item {
         margin-top: 2em;
@@ -245,28 +246,32 @@ header {
         }
     }
 }
-
 //------SKILLS----------
 #skills {
     background-color: $dark-grey;
     text-align: center;
     padding-top: 5em;
     padding-bottom: 10em;
+    font-family: 'Source Sans Pro', sans-serif;
+
     h2 {
         color: $light-grey;
         padding: 1em;
         margin-top: -1em;
+        font-size:4em;
     }
     i {
         font-size: 4em;
         color: $bright-red;
     }
     h3 {
-        color: $lighter-grey;
+        color: $light-grey;
+        font-size:2em;
     }
     p {
         color: $lighter-grey;
         padding: 1em;
+        font-size: 1.3em;
     }
 }
 
