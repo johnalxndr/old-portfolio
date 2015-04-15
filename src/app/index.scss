@@ -150,6 +150,13 @@ header {
             &:hover:before {
                 color: $dark-grey;
                 content: '\f423';
+            }    
+        }
+        .download{
+            color:$dark-grey;
+            &:hover:before{
+                color: $dark-grey;
+                content: '\f408';
             }
         }
     }
